@@ -48,5 +48,4 @@ void loop() {
   // Update BLE characteristic with the new data
   sensorCharacteristic.setValue((unsigned char*)bleData, sizeof(bleData));
 
-  delay(100);
 }

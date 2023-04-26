@@ -16,8 +16,7 @@ BLECharacteristic sensorCharacteristic = BLECharacteristic("2101", BLENotify, 12
 
 // Change the following line to use the other variant in .pio/libdeps/nrf52_dk/MPU6050/src/MPU6050.cpp
 // See https://github.com/jrowberg/i2cdevlib/issues/457
-#define printfloatx(Name,Variable,Spaces,Precision,EndTxt) { Serial.print(F(Name)); {char S[(Spaces + Precision + 3)];Serial.print(F(" ")); Serial.print(dtostrf((float)Variable,Spaces,Precision ,S));}Serial.print(F(EndTxt)); }//Name,Variable,Spaces,Precision,EndTxt
-#define printfloatx(Name,Variable,Spaces,Precision,EndTxt) { Serial.print(F(Name)); {char S[(Spaces + Precision + 3)];Serial.print(F(" ")); Serial.print(Variable);}Serial.print(F(EndTxt)); }//Name,Variable,Spaces,Precision,EndTxt
+#define dtostrf(Variable,Spaces,Precision ,S) (Variable)
 
 void setup() {
   // MPU-6050 Setup

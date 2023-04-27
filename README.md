@@ -35,8 +35,10 @@ This project aims to provide a simple and affordable way to measure and monitor 
 ## Example tag
 
 Sample image of a tag that can be purchased.
-![Front of tag](images/front-tag.jpg`)
-![Back of tag](images/back-tag.jpg`)
+| Front | Back |
+| ----- | ----- |
+| ![Front of tag](images/front-tag.jpg) | ![Back of tag](images/back-tag.jpg) It is good to check for programming pins before you buy one. |
+
 
 
 ## License

@@ -38,6 +38,14 @@ Sample image of a tag that can be purchased.
 ![Front of tag](images/front-tag.jpg`)
 ![Back of tag](images/back-tag.jpg`)
 
+## Sample monitor session
+
+Sample output from the serial monitor:
+![Sample monitor session](images/sample-monitor-session.gif)
+
+Sample graph of acceleration values:
+![Sample graph](images/sample-graph.png)
+
 
 ## License
 

@@ -35,8 +35,11 @@ This project aims to provide a simple and affordable way to measure and monitor 
 ## Example tag
 
 Sample image of a tag that can be purchased.
-![Front of tag](images/front-tag.jpg`)
-![Back of tag](images/back-tag.jpg`)
+
+| Front | Back |
+| ----- | ----- |
+| ![Front of tag](images/front-tag.jpg) | ![Back of tag](images/back-tag.jpg) It is good to check for programming pins before you buy one. |
+
 
 ## Sample monitor session
 
@@ -45,7 +48,6 @@ Sample output from the serial monitor:
 
 Sample graph of acceleration values:
 ![Sample graph](images/sample-graph.png)
-
 
 ## License
 

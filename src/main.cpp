@@ -21,6 +21,11 @@ float lastY = 0;
 float lastZ = 0;
 bool isAtRest = false;
 float highScore = 0;
+// Mass (in kg) and area (in m^2) for the hand or foot
+float mass = 0.5;  // Estimate to use for mass
+float area = 0.01; // Estimate to use for area
+float pa_to_psi = 0.000145038; // Conversion factor 1 Pa = 0.000145038 PSI
+
 
 // Set up BLE client
 static NimBLEAdvertisedDevice* myDevice;
@@ -160,6 +165,18 @@ void onNotify(NimBLERemoteCharacteristic* pRemoteCharacteristic, uint8_t* pData,
     float magnitude = sqrt(accelerationX * accelerationX + accelerationY * accelerationY + accelerationZ * accelerationZ);
 
     Serial.println("Magnitude: " + String(magnitude));
+
+    // Calculate force in Newtons (N)
+    float force = mass * magnitude; 
+
+    // Calculate pressure in Pascals (Pa)
+    float pressure_pa = force / area;
+
+    // Convert pressure to PSI
+    float pressure_psi = pressure_pa * pa_to_psi;
+
+    Serial.println("Force: " + String(force) + " N, Pressure: " + String(pressure_psi) + " PSI");
+
 
     // Call updateChart to reflect new data
     // updateChart();
